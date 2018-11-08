@@ -1,0 +1,330 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Các bài tập ôn luyện chuẩn bị kiểm tra - Lớp Liên thông 2</title>
+<style type="text/css">
+.codehtml {
+	font-family: Courier New, Courier, monospace;
+}
+</style>
+</head>
+
+<body>
+<h3>Bài 1. Nhập bán kính r của đường tròn, tính chu vi diện tích</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;title&gt;Chương trình tính diện tích và chu vi hình tròn&lt;/title&gt;<br />
+      &lt;meta http-equiv=&quot;Content-Type&quot;content=&quot;text/html;charset=utf-8&quot;&gt; <br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt;Nhập vào bán kính: &lt;input type=&quot;text&quot; id =  &quot;banKinh&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Chu vi là: &lt;input type= &quot;text&quot; id =  &quot;chuVi&quot; disabled = &quot;true&quot; /&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Diện tích là: &lt;input type= &quot;text&quot; id =  &quot;dienTich&quot; disabled = &quot;true&quot; /&gt;&lt;/p&gt;<br />
+      &lt;input type=&quot;button&quot; value = &quot;Nhập&quot; onclick = &quot;tinhCV(banKinh.value); tinhDT(banKinh.value);&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function tinhCV(r)<br />
+      {<br />
+if (r&gt;0)<br />
+chuVi.value =  2 * r * Math.PI;<br />
+else<br />
+alert(&quot;Bán kính không hợp lệ&quot;);<br />
+}<br />
+function tinhDT(r)<br />
+{<br />
+if (r&gt;0)<br />
+dienTich.value = Math.PI * r * r;<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="DuongTron.html">Demo</a></h4></p>
+<h3>Bài 2. Nhập n &gt; 0, tính tổng 1+2+3+...+n</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;title&gt;Chương trình tính tổng dãy số từ 1 đến n&lt;/title&gt;<br />
+      &lt;meta http-equiv=&quot;Content-Type&quot;content=&quot;text/html;charset=utf-8&quot;&gt; <br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt;Nhập vào n &gt; 0: &lt;input type=&quot;text&quot; id =  &quot;n&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Tổng: &lt;input type=&quot;text&quot; id =  &quot;kq&quot; disabled = &quot;true&quot; /&gt;&lt;/p&gt;<br />
+      &lt;input type=&quot;button&quot; value = &quot;Tính tổng&quot; onclick = &quot;kq.value = tinhTong(n.value);&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function tinhTong(n)<br />
+      {<br />
+if (n&gt;0)<br />
+{<br />
+var tong = 0;<br />
+for (i=1;i&lt;=n;i++)<br />
+{<br />
+tong += i;<br />
+}<br />
+return tong;<br />
+}<br />
+else<br />
+{<br />
+alert(&quot;Bạn hãy nhập n &gt; 0&quot;);<br />
+}<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="Tong.html">Demo</a></h4></p>
+<h3>Bài 3. Nhập n&gt; 0, tính n!</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;title&gt;Chương trình tính giai thừa&lt;/title&gt;<br />
+      &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;<br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot; &gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt; Nhập vào n: &lt;input type = &quot;text&quot; id = &quot;n&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt; Giai thừa: &lt;input type = &quot;text&quot; id = &quot;giaithua&quot; disabled = &quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;input type = &quot;button&quot; value = &quot;Tính giai thừa&quot; onclick = &quot;giaithua.value = giaiThua(n.value)&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function giaiThua(n)<br />
+      {<br />
+var kq = 1;<br />
+for (i = 1; i &lt;= n; i++)<br />
+{<br />
+kq *= i;<br />
+}<br />
+return kq;<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="GiaiThua.html">Demo</a></h4></p>
+<h3>Bài 4. Nhập n&gt;0, kiểm tra n là số chẵn hay lẻ</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;meta http-equiv = &quot;Content-Type&quot; content = &quot;text/html; charset=utf-8&quot;&gt; <br />
+      &lt;title&gt;Chương trình kiểm tra số chẵn lẻ&lt;/title&gt;<br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt;Nhập vào số nguyên n: &lt;input type = &quot;text&quot; id = &quot;n&quot;&lt;/p&gt;<br />
+      &lt;input type = &quot;button&quot; value = &quot;Kiểm tra&quot; onclick = &quot;ktChanLe(n.value)&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function ktChanLe(n)<br />
+      {<br />
+if (n%2==0)<br />
+alert(&quot;Số chẵn&quot;);<br />
+else<br />
+alert(&quot;Số lẻ&quot;);<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="ChanLe.html">Demo</a></h4></p>
+<h3>Bài 5. Nhập 2 số nguyên dương, tính UCLN và BCNN</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;title&gt;Chương trình tìm ước chung và bội chung&lt;/title&gt;<br />
+      &lt;meta http-equiv=&quot;Content-Type&quot; content = &quot;text/html; charset = utf8&quot;&gt;<br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt;Nhập vào a: &lt;input type=&quot;text&quot; id = &quot;a&quot;&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Nhập vào b: &lt;input type=&quot;text&quot; id = &quot;b&quot;&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Ước chung lớn nhất: &lt;input type=&quot;text&quot; id = &quot;UCLN&quot; disabled = &quot;true&quot;&gt; &lt;input type=&quot;button&quot; value = &quot;Tìm UCLN&quot; onclick= &quot;UCLN.value = timUCLN(a.value,b.value)&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Bội chung nhỏ nhất: &lt;input type=&quot;text&quot; id = &quot;BCNN&quot; disabled = &quot;true&quot;&gt; &lt;input type=&quot;button&quot; value = &quot;Tìm BCNN&quot; onclick= &quot;BCNN.value = timBCNN(a.value,b.value)&quot;/&gt;&lt;/p&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function timUCLN(a,b)<br />
+      {<br />
+var temp;<br />
+if (b==0)<br />
+return a;<br />
+else<br />
+return timUCLN(b,a%b);<br />
+}<br />
+function timBCNN(a,b)<br />
+{<br />
+return a * b / timUCLN(a,b);<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="TimUCLNvaBCNN.html">Demo</a></h4></p>
+<h3>Bài 6. Giải phương trình ax+b=0</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;meta http-equiv=&quot;Content-Type&quot; content = &quot;text/html; charset = utf8&quot;&gt;<br />
+      &lt;title&gt;Chương trình giải phương trình bậc 1&lt;/title&gt;<br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;h3&gt;Phương trình có dạng ax+b=0&lt;/h3&gt;<br />
+      &lt;p&gt;Nhập vào hệ số a: &lt;input type=&quot;text&quot; id = &quot;a&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Nhập vào hệ số b: &lt;input type=&quot;text&quot; id = &quot;b&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Kết quả: &lt;input type=&quot;text&quot; id = &quot;x1&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;input type=&quot;button&quot; value=&quot;Giải&quot; onclick=&quot;giaiPTb1(a.value,b.value)&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function giaiPTb1(a,b)<br />
+      {<br />
+if (a==0)<br />
+if (b!=0)<br />
+alert(&quot;Vô nghiệm&quot;);<br />
+else<br />
+alert(&quot;Vô số nghiệm&quot;);<br />
+else<br />
+x1.value = -b/a; <br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="PTB1.html">Demo</a></p></h4>
+<h3>Bài 7. Giải phương trình ax2+bx=c=0</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;meta http-equiv = &quot;Content-Type&quot; content = &quot;text/html; charset=utf-8&quot;&gt;<br />
+      &lt;title&gt;Giải phương trình bậc hai&lt;/title&gt;<br />
+      &lt;script type=&quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;h3&gt;Phương trình có dạng ax&lt;sup&gt;2&lt;/sup&gt;+bx+c=0&lt;/h3&gt;<br />
+      &lt;p&gt;Nhập vào hệ số a: &lt;input type=&quot;text&quot; id = &quot;a&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Nhập vào hệ số b: &lt;input type=&quot;text&quot; id = &quot;b&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Nhập vào hệ số c: &lt;input type=&quot;text&quot; id = &quot;c&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;X1 = &lt;input type=&quot;text&quot; id = &quot;x1&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;X2 = &lt;input type=&quot;text&quot; id = &quot;x2&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;input type=&quot;button&quot; value=&quot;Giải&quot; onclick=&quot;x1.value = x2.value = '';giaiPTb2(a.value,b.value,c.value);&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function giaiPTb2(a,b,c)<br />
+      {<br />
+if (a==0)<br />
+giaiPTb1(b,c);<br />
+else //a!=0<br />
+{<br />
+var delta = b * b - (4 * a * c);<br />
+if (delta &lt;0)<br />
+alert(&quot;Vô nghiệm&quot;);<br />
+else <br />
+{<br />
+if (delta ==0)<br />
+x1.value = x2.value = -b/2/a;<br />
+else<br />
+{<br />
+x1.value = -b-Math.sqrt(delta)/2/a;<br />
+x2.value = -b+Math.sqrt(delta)/2/a;<br />
+}<br />
+}<br />
+}<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="PTB2.html">Demo</a></h4></p>
+<h3>Bài 8. Tìm min max của một dãy số</h3>
+<p>Code html:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">&lt;html&gt;<br />
+      &lt;head&gt;<br />
+      &lt;meta http-equiv = &quot;Content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;<br />
+      &lt;title&gt;Tìm min max của dãy số&lt;/title&gt;<br />
+      &lt;script type = &quot;text/javascript&quot; src = &quot;script.js&quot;&gt;&lt;/script&gt;<br />
+      &lt;/head&gt;<br />
+      &lt;body&gt;<br />
+      &lt;p&gt;Nhập vào 1 dãy số: &lt;input type=&quot;text&quot; id = &quot;txtDaySo&quot;/&gt; (Các số phân tách nhau bởi dấu phẩy, hoặc dấu cách)&lt;/p&gt;<br />
+      &lt;p&gt;Chữ số nhỏ nhất là: &lt;input type=&quot;text&quot; id = &quot;txtMin&quot; disabled = &quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;p&gt;Chữ số lớn nhất là: &lt;input type=&quot;text&quot; id = &quot;txtMax&quot; disabled = &quot;true&quot;/&gt;&lt;/p&gt;<br />
+      &lt;input type=&quot;button&quot; value = &quot;Tìm&quot; onclick=&quot;timMinMax(txtDaySo.value);&quot;/&gt;<br />
+      &lt;/body&gt;<br />
+    &lt;/html&gt;</code></td>
+  </tr>
+</table>
+<p>Code file script.js:</p>
+<table width="82%" border="1">
+  <tr>
+    <td><code class="codehtml">function timMinMax(ds)<br />
+      {<br />
+n=ds.length;<br />
+for(i = 0;i&lt;n;i++)<br />
+{<br />
+ds = ds.replace(&quot;,&quot;,&quot; &quot;);<br />
+}<br />
+for(i = 0;i&lt;n;i++)<br />
+{<br />
+ds = ds.replace(&quot;  &quot;,&quot; &quot;);<br />
+}<br />
+txtDaySo.value = ds;<br />
+var list = ds.split(&quot; &quot;)<br />
+min = Number(list[0]);<br />
+for (i=0;i&lt;list.length;i++)<br />
+{<br />
+if (min&gt;Number(list[i]))<br />
+min = Number(list[i]);<br />
+}<br />
+txtMin.value = min;<br />
+max = Number(list[0]);<br />
+for (i=0;i&lt;list.length;i++)<br />
+{<br />
+if (max&lt;Number(list[i]))<br />
+max = Number(list[i]);<br />
+}<br />
+txtMax.value = max;<br />
+}</code></td>
+  </tr>
+</table>
+<p><h4><a href="timMinMax.html">Demo</a></h4></p>
+</body>
+</html>
