@@ -2,7 +2,18 @@
 <head>
 <title>Chương trình tìm ước chung và bội chung</title>
 <meta http-equiv="Content-Type" content = "text/html; charset = utf8">
-<script type = "text/javascript" src = "script.js"></script>
+<script type = "text/javascript">function timUCLN(a,b)
+{
+var temp;
+if (b==0)
+return a;
+else
+return timUCLN(b,a%b);
+}
+function timBCNN(a,b)
+{
+return a * b / timUCLN(a,b);
+}</script>
 </head>
 <body>
 <p>Nhập vào a: <input type="text" id = "a"></p>

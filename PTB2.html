@@ -2,7 +2,27 @@
 <head>
 <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
 <title>Giải phương trình bậc hai</title>
-<script type="text/javascript" src = "script.js"></script>
+<script type="text/javascript">function giaiPTb2(a,b,c)
+{
+if (a==0)
+giaiPTb1(b,c);
+else //a!=0
+{
+var delta = b * b - (4 * a * c);
+if (delta <0)
+alert("Vô nghiệm");
+else 
+{
+if (delta ==0)
+x1.value = x2.value = -b/2/a;
+else
+{
+x1.value = -b-Math.sqrt(delta)/2/a;
+x2.value = -b+Math.sqrt(delta)/2/a;
+}
+}
+}
+}</script>
 </head>
 <body>
 <h3>Phương trình có dạng ax<sup>2</sup>+bx+c=0</h3>

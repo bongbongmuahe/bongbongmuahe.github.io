@@ -2,12 +2,23 @@
 <head>
 <title>Chương trình tính diện tích và chu vi hình tròn</title>
 <meta http-equiv="Content-Type"content="text/html;charset=utf-8"> 
-<script type = "text/javascript" src = "script.js"></script>
+<script type = "text/javascript">function tinhCV(r)
+{
+if (r>0)
+chuVi.value = 2 * r * Math.PI;
+else
+alert("Bán kính không hợp lệ");
+}
+function tinhDT(r)
+{
+if (r>0)
+dienTich.value = Math.PI * r * r;
+}</script>
 </head>
 <body>
-<p>Nhập vào bán kính: <input type="text" id =  "banKinh"/></p>
-<p>Chu vi là: <input type= "text" id =  "chuVi" disabled = "true" /></p>
-<p>Diện tích là: <input type= "text" id =  "dienTich" disabled = "true" /></p>
+<p>Nhập vào bán kính: <input type="text" id = "banKinh"/></p>
+<p>Chu vi là: <input type= "text" id = "chuVi" disabled = "true" /></p>
+<p>Diện tích là: <input type= "text" id = "dienTich" disabled = "true" /></p>
 <input type="button" value = "Nhập" onclick = "tinhCV(banKinh.value); tinhDT(banKinh.value);"/>
 </body>
 </html>
