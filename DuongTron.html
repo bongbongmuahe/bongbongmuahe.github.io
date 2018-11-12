@@ -1,31 +1,30 @@
 <html>
 <head>
 <title>Chương trình tính diện tích và chu vi hình tròn</title>
-<meta http-equiv="Content-Type"content="text/html;charset=utf-8"> 
-<script type = "text/javascript">function tinhCV(r)
+<meta http-equiv="Content-type"content="text/html; charset=utf-8">
+<script type="text/javascript">function tinhCV(r)
 {
 if (r>0)
-chuVi.value = 2 * r * Math.PI;
+chuVi.value=2 * r * Math.PI;
 else
 alert("Bán kính không hợp lệ");
 }
 function tinhDT(r)
 {
 if (r>0)
-dienTich.value = Math.PI * r * r;
+dienTich.value=Math.PI * r * r;
 }
 function reset()
 {
-banKinh.value = chuVi.value = dienTich.value = "";
-}
-</script>
+dienTich.value=chuVi.value=banKinh.value="";
+}</script>
 </head>
 <body>
-<p>Nhập vào bán kính: <input type="text" id = "banKinh"/> (đơn vị)</p>
-  <p>Chu vi là: <input type= "text" id = "chuVi" disabled = "true" /> (đơn vị)</p>
-  <p>Diện tích là: <input type= "text" id = "dienTich" disabled = "true" /> (đơn vị<sup>2</sup>)</p>
-<input type="button" value = "Tính chu vi" onclick = "tinhCV(banKinh.value);"/>
-<input type="button" value = "Tính diện tích" onclick = "tinhDT(banKinh.value);"/>
-<input type="button" value = "Nhập lại" onclick = "reset();"/>
+<p>Nhập vào bán kính: <input type="text" id="banKinh"/> (đơn vị)</p>
+<p>Chu vi là: <input type="text" id="chuVi" disabled="true" /> (đơn vị)</p>
+<p>Diện tích là: <input type="text" id="dienTich" disabled="true" /> (đơn vị<sup>2</sup>)</p>
+<input type="button" value="Tính chu vi" onclick="tinhCV(banKinh.value);"/>
+<input type="button" value="Tính diện tích" onclick="tinhDT(banKinh.value);"/>
+<input type="button" value="Nhập lại" onclick="reset();"/>
 </body>
 </html>

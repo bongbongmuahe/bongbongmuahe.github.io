@@ -1,35 +1,31 @@
 <html>
 <head>
-<meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Giải phương trình bậc hai</title>
 <script type="text/javascript">
-function giaiPTb1(a,b)
+function giaiPTb2(a,b,c)
 {
 if (a==0)
-if (b!=0)
+if(b==0)
+if (c==0)
 alert("Vô nghiệm");
 else
 alert("Vô số nghiệm");
 else
-x1.value = -b/a; 
-}
-function giaiPTb2(a,b,c)
-{
-if (a==0)
-giaiPTb1(b,c);
-else //a!=0
-{
-var delta = b * b - (4 * a * c);
-if (delta <0)
-alert("Vô nghiệm");
-else 
-{
-if (delta ==0)
-x1.value = x2.value = -b/2/a;
+x1.value = -c/b;
 else
 {
-x1.value = -b-Math.sqrt(delta)/2/a;
-x2.value = -b+Math.sqrt(delta)/2/a;
+delta=b * b - (4 * a * c);
+if(delta <0)
+alert("Vô nghiệm");
+else
+{
+if(delta ==0)
+x1.value=x2.value=-b/2/a;
+else
+{
+x1.value=(-b-Math.sqrt(delta))/2/a;
+x2.value=(-b+Math.sqrt(delta))/2/a;
 }
 }
 }
@@ -37,11 +33,11 @@ x2.value = -b+Math.sqrt(delta)/2/a;
 </head>
 <body>
 <h3>Phương trình có dạng ax<sup>2</sup>+bx+c=0</h3>
-<p>Nhập vào hệ số a: <input type="text" id = "a"/></p>
-<p>Nhập vào hệ số b: <input type="text" id = "b"/></p>
-<p>Nhập vào hệ số c: <input type="text" id = "c"/></p>
-<p>X1 = <input type="text" id = "x1" disabled="true"/></p>
-<p>X2 = <input type="text" id = "x2" disabled="true"/></p>
-<input type="button" value="Giải" onclick="x1.value = x2.value = '';giaiPTb2(a.value,b.value,c.value);"/>
+<p>Nhập vào hệ số a: <input type="text" id="a"/></p>
+<p>Nhập vào hệ số b: <input type="text" id="b"/></p>
+<p>Nhập vào hệ số c: <input type="text" id="c"/></p>
+<p>x1=<input type="text"id="x1" disabled="true"/></p>
+<p>x2=<input type="text" id="x2" disabled="true"/></p>
+<input type="button" value="Giải" onclick="x1.value=x2.value=' ';giaiPTb2(a.value,b.value,c.value);"/>
 </body>
 </html>

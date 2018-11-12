@@ -1,11 +1,11 @@
 <html>
 <head>
 <title>Chương trình tính giai thừa</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type = "text/javascript">function giaiThua(n)
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<script type="text/javascript">function giaiThua(n)
 {
-var kq = 1;
-for (i = 1; i <= n; i++)
+var kq=1;
+for (i=1; i <= n; i++)
 {
 kq *= i;
 }
@@ -13,8 +13,8 @@ return kq;
 }</script>
 </head>
 <body>
-<p> Nhập vào n: <input type = "text" id = "n"/></p>
-<p> Giai thừa: <input type = "text" id = "giaithua" disabled = "true"/></p>
-<input type = "button" value = "Tính giai thừa" onclick = "giaithua.value = giaiThua(n.value)"/>
+<p> Nhập vào n: <input type="text" id="n"/></p>
+<p> Giai thừa: <input type="text" id="giaithua" disabled="true"/></p>
+<input type="button" value="Tính giai thừa" onclick="giaithua.value=giaiThua(n.value)"/>
 </body>
 </html>
