@@ -2,7 +2,18 @@
 <head>
 <meta http-equiv = "Content-Type" content = "text/html; charset=utf-8">
 <title>Giải phương trình bậc hai</title>
-<script type="text/javascript">function giaiPTb2(a,b,c)
+<script type="text/javascript">
+function giaiPTb1(a,b)
+{
+if (a==0)
+if (b!=0)
+alert("Vô nghiệm");
+else
+alert("Vô số nghiệm");
+else
+x1.value = -b/a; 
+}
+function giaiPTb2(a,b,c)
 {
 if (a==0)
 giaiPTb1(b,c);
