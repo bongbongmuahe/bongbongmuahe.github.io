@@ -39,15 +39,21 @@ code {
     <strong><font color="black">{</font></strong><br />
     <em><strong><font color="#663399">if </font></strong></em><strong>(</strong>r<strong>&gt;</strong>0<strong>)</strong><br />
     dienTich.value=Math.PI <strong>*</strong> r <strong>*</strong> r;<br />
-   <strong><font color="black">}</font></strong><font color="blue">&lt;/script&gt;</font><br />
-    <font color="blue">&lt;/head&gt;</font><br />
-    <font color="blue">&lt;body&gt;</font><br />
-    <font color="blue">&lt;p&gt;</font><strong><font color="black">Nhập vào bán kính: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">banKinh&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br />
-    <font color="blue">&lt;p&gt;</font><strong><font color="black">Chu vi là: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><font color="blue"><strong>chuVi&quot;</strong></font></strong><font color="red"> disabled=&quot;</font><strong><font color="blue">true&quot;</font></strong> <font color="blue">/&gt;&lt;/p&gt;</font><br />
-    <font color="blue">&lt;p&gt;</font><strong><font color="black">Diện tích là: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">dienTich&quot;</font></strong><font color="red"> disabled=&quot;</font><strong><font color="blue">true&quot;</font></strong> <font color="blue">/&gt;&lt;/p&gt;</font><br />
-    <font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">button&quot;</font></strong> <font color="red">value</font>=&quot;<strong><font color="blue">Nhập&quot;</font></strong> <font color="red">onclick</font>=&quot;<font color="blue"><strong>tinhCV(banKinh.value); tinhDT(banKinh.value);&quot;</strong>/&gt;</font><br />
-    <font color="blue">&lt;/body&gt;</font><br />
-  <font color="blue">&lt;/html&gt;</font></code></p></td>
+   <strong><font color="black">}</font></strong></code><br />
+   <code class="codehtml"><em><strong><font color="#663399">function</font></strong></em> reset(<strong>)</strong><br />
+      <strong><font color="black">{</font></strong><br />
+      dienTich.value=chuVi.value=banKinh.value=&quot;&quot;<strong>;</strong><br />
+      <strong><font color="black">}</font></strong></code><code class="codehtml"><font color="blue">&lt;/script&gt;</font><br />
+      <font color="blue">&lt;/head&gt;</font><br />
+      <font color="blue">&lt;body&gt;</font><br />
+      <font color="blue">&lt;p&gt;</font><strong><font color="black">Nhập vào bán kính: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">banKinh&quot;</font></strong><font color="blue">/&gt; (đơn vị)&lt;/p&gt;</font><br />
+      <font color="blue">&lt;p&gt;</font><strong><font color="black">Chu vi là: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><font color="blue"><strong>chuVi&quot;</strong></font></strong><font color="red"> disabled=&quot;</font><strong><font color="blue">true&quot;</font></strong> <font color="blue">/&gt; (đơn vị)&lt;/p&gt;</font><br />
+      <font color="blue">&lt;p&gt;</font><strong><font color="black">Diện tích là: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">dienTich&quot;</font></strong><font color="red"> disabled=&quot;</font><strong><font color="blue">true&quot;</font></strong> <font color="blue">/&gt; (đơn vị&lt;sup&gt;2&lt;/sup&gt;)&lt;/p&gt;</font><br />
+      <font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">button&quot;</font></strong> <font color="red">value</font>=&quot;<strong><font color="blue">Tính chu vi&quot;</font></strong> <font color="red">onclick</font>=&quot;<font color="blue"><strong>tinhCV(banKinh.value);&quot;</strong>/&gt;</font></code>  
+    <br />
+    <code class="codehtml"><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">button&quot;</font></strong> <font color="red">value</font>=&quot;<strong><font color="blue">Tính diện tích&quot;</font></strong> <font color="red">onclick</font>=&quot;<font color="blue"><strong>tinhDT(banKinh.value);&quot;</strong>/&gt;</font></code><code class="codehtml"><br />
+      <font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">button&quot;</font></strong> <font color="red">value</font>=&quot;<strong><font color="blue">Nhập lại&quot;</font></strong> <font color="red">onclick</font>=&quot;<font color="blue"><strong>reset();&quot;</strong>/&gt;</font><font color="blue"><br />&lt;/body&gt;</font><br />
+    <font color="blue">&lt;/html&gt;</font></code></td>
  </tr>
 </table><h4><a href="DuongTron.html">Demo</a></p>
 </h4>
