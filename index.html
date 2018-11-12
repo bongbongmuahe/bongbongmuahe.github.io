@@ -204,49 +204,49 @@ x1.value=-b/a; <br />
 <p>Code html:</p>
 <table width="100%" border="1">
  <tr>
-  <td><p>&lt;html&gt;<br>
-    &lt;head&gt;<br>
-    &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;<br>
-    &lt;title&gt;Giải phương trình bậc hai&lt;/title&gt;<br>
-    &lt;script type=&quot;text/javascript&quot;&gt;<br>
-    function giaiPTb2(a,b,c)<br>
-    {<br>
-if (a==0)<br>
-if (b==0)<br>
-if (c==0)<br>
-alert(&quot;PT VSN&quot;);<br>
-else<br>
-alert(&quot;PTVN&quot;);<br>
-else<br>
-x1.value = -c/b;<br>
-else //a!=0<br>
-{<br>
-delta=b * b - (4 * a * c);<br>
-if (delta &lt;0)<br>
-alert(&quot;Vô nghiệm&quot;);<br>
-else //delta&gt;=0<br>
-{<br>
-if (delta ==0)<br>
-x1.value=x2.value=-b/2/a;<br>
-else //delta &gt;0<br>
-{<br>
-x1.value=(-b-Math.sqrt(delta))/2/a;<br>
-x2.value=(-b+Math.sqrt(delta))/2/a;<br>
-}<br>
-}<br>
-}<br>
-}&lt;/script&gt;<br>
-&lt;/head&gt;<br>
-&lt;body&gt;<br>
-&lt;h3&gt;Phương trình có dạng ax&lt;sup&gt;2&lt;/sup&gt;+bx+c=0&lt;/h3&gt;<br>
-&lt;p&gt;Nhập vào hệ số a: &lt;input type=&quot;text&quot; id=&quot;a&quot;/&gt;&lt;/p&gt;<br>
-&lt;p&gt;Nhập vào hệ số b: &lt;input type=&quot;text&quot; id=&quot;b&quot;/&gt;&lt;/p&gt;<br>
-&lt;p&gt;Nhập vào hệ số c: &lt;input type=&quot;text&quot; id=&quot;c&quot;/&gt;&lt;/p&gt;<br>
-&lt;p&gt;X1=&lt;input type=&quot;text&quot; id=&quot;x1&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br>
-&lt;p&gt;X2=&lt;input type=&quot;text&quot; id=&quot;x2&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br>
-&lt;input type=&quot;button&quot; value=&quot;Giải&quot; onclick=&quot;x1.value=x2.value='';giaiPTb2(a.value,b.value,c.value);&quot;/&gt;<br>
-&lt;/body&gt;<br>
-&lt;/html&gt;</p></td>
+  <td><p><font color="blue">&lt;html&gt;</font><br>
+    <font color="blue">&lt;head&gt;</font><br>
+    <font color="blue">&lt;meta</font> <font color="red">http-equiv</font>=<strong><font color ="blue">&quot;Content-Type&quot;</font></strong> <font color="red">content</font>=<strong><font color ="blue">&quot;text/html; charset=utf-8&quot;</font></strong><font color="blue">&gt;</font><br>
+    <font color="blue">&lt;title&gt;</font><strong>Giải phương trình bậc hai</strong><font color="blue">&lt;/title&gt;</font><br>
+    <font color="blue">&lt;script</font> <font color="red">type</font>=<strong><font color ="blue">&quot;text/javascript&quot;</font></strong><font color="blue">&gt;</font><br>
+    <code class="codehtml"><em><strong><font color="#663399">function</font></strong></em></code> giaiPTb2<strong>(</strong>a,b,c<strong>)</strong><br>
+    <strong>{</strong><br>
+    <code class="codehtml"><em><strong><font color="#663399">if</font></strong></em></code><strong> (</strong>a<strong>==</strong>0<strong>)</strong><br>
+    <code class="codehtml"><em><strong><font color="#663399">if</font></strong></em></code><strong>(</strong>b<strong>==</strong>0<strong>)</strong><br>
+    <code class="codehtml"><em><strong><font color="#663399">if</font></strong></em></code> <strong>(</strong>c<strong>==</strong>0<strong>)</strong><br>
+alert<strong>(</strong><code class="codehtml"><font color="#999999">&quot;Vô nghiệm&quot;</font></code><strong>)</strong>;<br>
+<code class="codehtml"><em><strong><font color="#663399">else</font></strong></em></code><br>
+alert<strong>(</strong><code class="codehtml"><font color="#999999">&quot;Vô số nghiệm&quot;</font></code><strong>)</strong>;<br>
+<code class="codehtml"><em><strong><font color="#663399">else</font></strong></em></code><br>
+x1.value <strong>=</strong> <strong>-</strong>c<strong>/</strong>b;<br>
+<code class="codehtml"><em><strong><font color="#663399">else</font></strong></em></code><br>
+<strong>{</strong><br>
+      delta=b <strong>*</strong> b <strong>- (</strong>4 <strong>*</strong> a <strong>*</strong> c<strong>)</strong>;<br>
+      <code class="codehtml"><em><strong><font color="#663399">if</font></strong></em></code><strong>(</strong>delta <strong>&lt;</strong>0<strong>)</strong><br>
+      alert<strong>(</strong><code class="codehtml"><font color="#999999">&quot;Vô nghiệm&quot;</font></code><strong>)</strong>;<br>
+      <code class="codehtml"><em><strong><font color="#663399">else</font></strong></em></code><br>
+      <strong>{</strong><br>
+      <code class="codehtml"><em><strong><font color="#663399">if</font></strong></em></code><strong>(</strong>delta <strong>==</strong>0<strong>)</strong><br>
+      x1.value<strong>=</strong>x2.value<strong>=-</strong>b<strong>/</strong>2<strong>/</strong>a;<br>
+      <code class="codehtml"><em><strong><font color="#663399">else</font></strong></em></code><br>
+      <strong>{</strong><br>
+      x1.value<strong>=(-</strong>b<strong>-</strong>Math.sqrt<strong>(</strong>delta<strong>))/</strong>2<strong>/</strong>a;<br>
+      x2.value<strong>=(-</strong>b<strong>+</strong>Math.sqrt<strong>(</strong>delta<strong>))/</strong>2<strong>/</strong>a;<br>
+      <strong>}</strong><br>
+      <strong>}</strong><br>
+      <strong>}</strong><br>
+      <strong>}</strong><font color="blue">&lt;/script&gt;</font><br>
+      <font color="blue">&lt;/head&gt;</font><br>
+      <font color="blue">&lt;body&gt;</font><br>
+      <font color="blue">&lt;h3&gt;</font><strong>Phương trình có dạng ax</strong><font color="blue">&lt;sup&gt;</font><strong>2</strong><font color="blue">&lt;/sup&gt;</font><strong>+bx+c=0</strong><font color="blue">&lt;/h3&gt;</font><br>
+      <font color="blue">&lt;p&gt;</font><strong>Nhập vào hệ số a: </strong><font color="blue">&lt;input</font><font color="red"> type</font>=<strong><font color ="blue">&quot;text&quot; </font></strong><font color="red">id</font>=<strong><font color ="blue">&quot;a&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br>
+      <font color="blue">&lt;p&gt;</font><strong>Nhập vào hệ số b: </strong><font color="blue">&lt;input </font><font color="red">type</font>=<strong><font color ="blue">&quot;text&quot;</font></strong> <font color="red">id</font>=<strong><font color ="blue">&quot;b&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br>
+      <font color="blue">&lt;p&gt;</font><strong>Nhập vào hệ số c: </strong><font color="blue">&lt;input </font><font color="red">type</font>=<strong><font color ="blue">&quot;text&quot;</font></strong> <font color="red">id</font>=<strong><font color ="blue">&quot;c&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br>
+      <font color="blue">&lt;p&gt;</font><strong>x1</strong>=<font color="blue">&lt;input</font> <font color="red">type</font>=<strong><font color ="blue">&quot;text&quot;</font></strong><font color="red">id</font>=<strong><font color ="blue">&quot;x1&quot; </font></strong><font color="red">disabled</font>=<strong><font color ="blue">&quot;true&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br>
+      <font color="blue">&lt;p&gt;</font><strong>x2</strong>=<font color="blue">&lt;input</font> <font color="red">type</font>=<strong><font color ="blue">&quot;text&quot;</font></strong> <font color="red">id</font>=&quot;x2&quot; <font color="red">disabled</font>=<strong><font color ="blue">&quot;true&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br>
+      <font color="blue">&lt;input</font> <font color="red">type</font>=<strong><font color ="blue">&quot;button&quot;</font></strong><font color="red"> value</font>=<strong><font color ="blue">&quot;Giải&quot;</font></strong><font color="red"> onclick</font>=<strong><font color ="blue">&quot;x1.value=x2.value=' ';giaiPTb2(a.value,b.value,c.value);&quot;</font></strong><font color="blue">/&gt;</font><br>
+      <font color="blue">&lt;/body&gt;<br>
+    </font><font color="blue">&lt;/html&gt;</font></p></td>
  </tr>
 </table><h4><a href="PTB2.html">Demo</a></h4></p>
 <h3>Bài 8. Tìm min max của một dãy số</h3>
