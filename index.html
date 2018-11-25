@@ -23,15 +23,15 @@ body {
 }
 </style>
 <script language="javascript">
-cusor='+';
+cusor='_';
 count=0; 
-mess='Dưới đây là danh sách các bài tập thầy Hưng giao để ôn tập. <br/ >'
+mess='Dưới đây là danh sách các bài tập thầy Hưng giao để ôn tập chuẩn bị kiểm tra. <br/ >'
  
 function type()
 {
-if (cusor=='+') cusor=' '; else cusor='+';
+if (cusor=='_') cusor=' '; else cusor='_';
 document.getElementById('scr').innerHTML=mess.substring(0,count++)+cusor;
-if(count<=mess.length) setTimeout("type()",200);
+if(count<=mess.length) setTimeout("type()",300);
 }
 </script>
 </head>
