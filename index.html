@@ -286,10 +286,11 @@ ds=ds.replace<strong>(</strong>&quot;,&quot;,&quot; &quot;<strong>)</strong>;<br
 <strong><font color="black">}</font></strong><br />
 <em><strong><font color="#663399">for</font></strong></em><strong>(</strong>i=0;i&lt;n;i<strong>++)</strong><br />
 <strong><font color="black">{</font></strong><br />
-ds=ds.replace<strong>(</strong>&quot;  &quot;,&quot; &quot;<strong>)</strong>;<br />
-<strong><font color="black">}</font></strong><br />
+ds=ds.replace<strong>(</strong>&quot;   &quot;,&quot; &quot;<strong>)</strong>;<br />
+<strong><font color="black">}</font></strong><br>
+ds=ds.trim();<br />
 txtDaySo.value=ds;<br />
-<em><strong><font color="#663399">var</font></strong></em> list=ds.split<strong>(</strong>&quot; &quot;<strong>)</strong><br />
+<em><strong><font color="#663399">var</font></strong></em> list=ds.split<strong>(</strong>&quot; &quot;<strong>)</strong>;<br />
 min=Number<strong>(</strong>list[0]<strong>)</strong>;<br />
 <em><strong><font color="#663399">for</font></strong></em> <strong>(</strong>i=0;i&lt;list.length;i<strong>++)</strong><br />
 <strong><font color="black">{</font></strong><br />
@@ -319,31 +320,43 @@ txtMax.value=max;<br />
 <p>Code html:</p>
 <table width="100%" border="1">
   <tr>
-    <td class="codehtml"><code>&lt;html&gt;<br>      &lt;head&gt;<br>      &lt;meta http-equiv=&quot;Content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;<br>      &lt;title&gt;Sắp xếp dãy số&lt;/title&gt;<br>      &lt;script type=&quot;text/javascript&quot;&gt;function Sapxep(ds)<br>
-      {<br>
-n=ds.length;<br>
-for(i=0;i&lt;n;i++)<br>
-{<br>
-ds=ds.replace(&quot;,&quot;,&quot; &quot;);<br>
-}<br>
-for(i=0;i&lt;n;i++)<br>
-{<br>
-ds=ds.replace(&quot;  &quot;,&quot; &quot;);<br>
-}<br>
-ds=ds.trim();<br>
-txtDaySo.value=ds;<br>
-var list=ds.split(&quot; &quot;)<br>
-list = list.sort(function(a, b){return a - b});<br>
-txtSapXep.value = &quot;&quot;;<br>
-for (i=0;i&lt;list.length;i++)<br>
-{<br>
-txtSapXep.value += list[i];<br>
-txtSapXep.value += &quot; &quot;;<br>
-}<br>
-txtSapXep.value = txtSapXep.value.trim();<br>
-}&lt;/script&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>&lt;p&gt;Nhập vào 1 dãy số: &lt;input type=&quot;text&quot; id=&quot;txtDaySo&quot;/&gt; (Các số phân tách nhau bởi dấu phẩy, hoặc dấu cách)&lt;/p&gt;<br>&lt;p&gt;Dãy số sau khi sắp xếp: &lt;input type=&quot;text&quot; id=&quot;txtSapXep&quot; disabled=&quot;true&quot;/&gt;&lt;/p&gt;<br>&lt;input type=&quot;button&quot; value=&quot;Sắp xếp tăng dần&quot; onclick=&quot;Sapxep(txtDaySo.value);&quot;/&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</code></td>
+    <td><code class="codehtml"><font color = "blue">&lt;html&gt;</font><br />
+      <font color="blue">&lt;head&gt;</font><br />
+      <font color="blue">&lt;meta</font> <font color="red">http-equiv</font>=&quot;<strong><font color="blue">Content-type&quot;</font></strong> <font color="red">content</font>=&quot;<strong><font color="blue">text/html; charset=utf-8&quot;</font></strong><font color = "blue">&gt;</font><br />
+      <font color="blue">&lt;title&gt;</font><font color="black"><strong>Sắp xếp dãy số</strong></font><font color="blue">&lt;/title&gt;</font><br />
+      <font color="blue">&lt;script</font> <font color = "red">type</font>=&quot;<strong><font color ="blue">text/javascript&quot;</font></strong><font color = "blue">&gt;</font><em><strong><font color="#663399">function</font></strong></em> Sapxep<strong>(</strong>ds<strong>)</strong><br />
+      <strong><font color="black">{</font></strong><br />
+      n=ds.length;<br />
+      <em><strong><font color="#663399">for</font></strong></em><strong>(</strong>i=0;i&lt;n;i<strong>++)</strong><br />
+      <strong><font color="black">{</font></strong><br />
+      ds=ds.replace<strong>(</strong>&quot;,&quot;,&quot; &quot;<strong>)</strong>;<br />
+      <strong><font color="black">}</font></strong><br />
+      <em><strong><font color="#663399">for</font></strong></em><strong>(</strong>i=0;i&lt;n;i<strong>++)</strong><br />
+      <strong><font color="black">{</font></strong><br />
+      ds=ds.replace<strong>(</strong>&quot;   &quot;,&quot; &quot;<strong>)</strong>;<br />
+      <strong><font color="black">}</font></strong><br>
+      ds=ds.trim<strong>(</strong>);      <br />
+      txtDaySo.value=ds;<br />
+      <em><strong><font color="#663399">var</font></strong></em> list=ds.split<strong>(</strong>&quot; &quot;<strong>)</strong>;<br>
+      list = list.sort<strong>(</strong>function<strong>(</strong>a, b<strong>)</strong><strong><font color="black">{</font></strong>return a - b<strong><font color="black">}</font></strong><strong>)</strong>;<br>
+      txtSapXep.value = &quot;&quot;;<br />
+      <em><strong><font color="#663399">for</font></strong></em> <strong>(</strong>i=0;i&lt;list.length;i++<strong>)</strong><br>
+      <strong><font color="black">{</font></strong><br>
+      txtSapXep.value += list[i];<br>
+      txtSapXep.value += &quot; &quot;;<br>
+      <strong><font color="black">}</font></strong><br>
+      txtSapXep.value = txtSapXep.value.trim<strong>()</strong>;<br />
+      <strong><font color="black">}</font></strong><font color="blue">&lt;/script&gt;</font><br />
+      <font color="blue">&lt;/head&gt;</font><br />
+      <font color="blue">&lt;body&gt;</font><br />
+      <font color="blue">&lt;p&gt;</font><strong><font color="black">Nhập vào 1 dãy số: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">txtDaySo&quot;</font></strong><font color="blue">/&gt;</font> <strong>(</strong>Các số phân tách nhau bởi dấu phẩy, hoặc dấu cách<strong>)</strong><font color="blue">&lt;/p&gt;</font><br />
+      <font color="blue">&lt;p&gt;</font><strong><font color="black">Dãy số sau khi sắp xếp: </font></strong><font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">text&quot;</font></strong><font color="red"> id=&quot;</font><strong><font color="blue">txtSapXep&quot;</font></strong><font color="red"> disabled=&quot;</font><strong><font color="blue">true&quot;</font></strong><font color="blue">/&gt;&lt;/p&gt;</font><br />
+      <font color="blue">&lt;input</font> <font color = "red">type</font>=&quot;<strong><font color="blue">button&quot;</font></strong> <font color="red">value</font>=&quot;<strong><font color="blue">Sắp xếp tăng dần&quot;</font></strong> <font color="red">onclick</font>=&quot;<strong><font color ="blue">Sapxep(txtDaySo.value);&quot;</font></strong><font color="blue">/&gt;</font><br />
+      <font color="blue">&lt;/body&gt;</font><br />
+      <font color="blue">&lt;/html&gt;</font></code></td>
   </tr>
 </table>
+<p>&nbsp;</p>
 <h4><a href="sapxep.html">Demo</a></h4>
 </body>
 </html>
