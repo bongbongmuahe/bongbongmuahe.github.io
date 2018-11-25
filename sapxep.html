@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<title>Sắp xếp dãy số</title>
+<script type="text/javascript">function Sapxep(ds)
+{
+	n=ds.length;
+	for(i=0;i<n;i++)
+	{
+		ds=ds.replace(","," ");
+	}
+	for(i=0;i<n;i++)
+	{
+		ds=ds.replace("  "," ");
+	}
+	ds=ds.trim();
+	txtDaySo.value=ds;
+	var list=ds.split(" ")
+	list = list.sort(function(a, b){return a - b});
+	txtSapXep.value = "";
+	for (i=0;i<list.length;i++)
+	{
+		txtSapXep.value += list[i];
+		txtSapXep.value += " ";
+	}
+	txtSapXep.value = txtSapXep.value.trim();
+}</script>
+</head>
+<body>
+<p>Nhập vào 1 dãy số: <input type="text" id="txtDaySo"/> (Các số phân tách nhau bởi dấu phẩy, hoặc dấu cách)</p>
+<p>Dãy số sau khi sắp xếp: <input type="text" id="txtSapXep" disabled="true"/></p>
+<input type="button" value="Sắp xếp tăng dần" onclick="Sapxep(txtDaySo.value);"/>
+</body>
+</html>
